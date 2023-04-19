@@ -8,7 +8,9 @@ import java.util.ArrayList;
 
 public class ClientController {
 
-    private IClientService service;
+    private IClientService service;//en lugar de clientService declaro un objeto de tipo interfaz para poder implementar como quiera
+                                    //se puede declarar una variable(objeto) como una interfaz, no es necesario decararla como una
+                                    //clase concreta (Importante). Declaración no es inicialización o instanciación
     public ClientController() {
         service = new ClientServiceImpl();
     }

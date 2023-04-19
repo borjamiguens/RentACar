@@ -16,8 +16,8 @@ class CarRepositoryTest {
     void setUp() {
 
         repository = new CarRepository();
-        Car car1 = new Car(128,"4567JKP");
-        Car car2 = new Car(192,"9876PYT");
+        Car car1 = new Car(128L,"4567JKP");
+        Car car2 = new Car(192L,"9876PYT");
         repository.add(car1);
         repository.add(car2);
 
@@ -26,8 +26,8 @@ class CarRepositoryTest {
     @Test
     void add() {
 
-        Car car3 = new Car(500,"147TRW");
-        Car car4 = new Car(501,"1236DFG");
+        Car car3 = new Car(500L,"147TRW");
+        Car car4 = new Car(501L,"1236DFG");
         repository.add(car3);
         Assertions.assertEquals(car3,repository.findById(500L));
 
