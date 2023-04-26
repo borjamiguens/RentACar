@@ -2,6 +2,8 @@ package org.example.service;
 
 import org.example.model.Client;
 import org.example.model.Rental;
+import org.example.repository.IRentalRepository;
+import org.example.repository.RentalRepository;
 
 import java.util.ArrayList;
 
@@ -11,16 +13,18 @@ public class RentalServiceImpl implements IRentalService {
 
     public RentalServiceImpl(){
 
-        repository= new rentalRepository;
+        repository= new RentalRepository();
 
     }
 
 
 
     @Override
-    public void add(IRentalService rental) {
+    public void add(Rental rental) {
         repository.add( rental);
     }
+
+
 
     @Override
     public void deleteById(Long idRental) {
@@ -33,12 +37,17 @@ public class RentalServiceImpl implements IRentalService {
     }
 
     @Override
-    public Client findById(String idRental) {
-        return repository.findById(idRental);
+    public Client findById(String id) {
+        return null;
     }
 
+//    @Override
+//    public Client findById(String idRental) {
+//        return repository.findById(idRental);
+//    }
+
     @Override
-    public void update(IRentalService rental) {
+    public void update(Rental rental) {
         repository.update(rental);
     }
 }

@@ -1,18 +1,21 @@
 package org.example.service;
 
 import org.example.model.Client;
+import org.example.model.Rental;
 
 import java.util.ArrayList;
 
 public interface IRentalService {
 
 
+        void add(Rental rental);
 
-        void add(org.example.service.IRentalService rental);
-        void deleteById(Long idRental);
+        void deleteById(Long id);
+
         ArrayList findAll();
-        Client findById(String idRental);
-        void update(org.example.service.IRentalService rental);
 
+        Client findById(String id);
 
+        void update(Rental rental);
 }
+
